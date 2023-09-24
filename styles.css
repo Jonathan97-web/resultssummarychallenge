@@ -100,6 +100,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  line-break: loose;
 }
 
 .continue-button:hover {
@@ -116,11 +118,10 @@ body {
 
   section {
     display: flex;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
   }
 
   .container2 {
@@ -165,10 +166,16 @@ body {
 
   .great p {
     font-size: large;
+    text-align: center;
+    line-break: auto;
   }
 
   .continue-button {
     margin-top: 30px;
     height: 3.5em;
+  }
+
+  .attribution a {
+    font-size: x-large;
   }
 }
