@@ -77,3 +77,13 @@ body {
 .summary p {
   margin: 10px;
 }
+
+.continue-button {
+  margin-top: 10px;
+  background: hsl(224, 30%, 27%);
+  color: white;
+  font-size: 20px;
+  border-radius: 20px;
+  width: 80%;
+  height: 50px;
+}
