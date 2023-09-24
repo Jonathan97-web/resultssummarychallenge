@@ -94,19 +94,24 @@ body {
   font-weight: 600;
   width: 80%;
   height: 50px;
-  border: none;
+}
+
+.great {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .continue-button:hover {
-  background: linear-gradient(hsl(241, 81%, 54%));
+  background: linear-gradient(var(--slateblue), var(--royalblue));
 }
 
 @media only screen and (min-width: 1080px) {
   .container1 {
-    width: 25em;
-    height: 35em;
+    width: 22em;
+    height: 30em;
     border-radius: 20px;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   section {
@@ -120,8 +125,8 @@ body {
 
   .container2 {
     flex-direction: column;
-    width: 25em;
-    height: 35em;
+    width: 22em;
+    height: 30em;
     position: relative;
     border-radius: 20px;
     justify-content: center;
@@ -146,5 +151,24 @@ body {
 
   .your-result {
     font-size: 30px;
+  }
+
+  .great {
+    font-size: 20px;
+    margin-top: 50px;
+  }
+
+  .great h2 {
+    font-size: xx-large;
+    font-weight: 500;
+  }
+
+  .great p {
+    font-size: large;
+  }
+
+  .continue-button {
+    margin-top: 30px;
+    height: 3.5em;
   }
 }
