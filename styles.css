@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
 
 :root {
-  --royalblue: hsl(252, 100%, 67%, 1);
-  --slateblue: hsl(241, 81%, 54%, 1);
+  --royalblue: hsl(252, 100%, 54%, 1);
+  --slateblue: hsl(241, 81%, 67%, 1);
   --violetblue: hsla(256, 72%, 46%, 1);
-  --persianblue: hsla(241, 72%, 46%, 0.5);
+  --persianblue: hsla(241, 72%, 46%, 0.8);
 }
 
 * {
@@ -17,10 +17,10 @@ body {
   font-family: "Hanken Grotesk";
 }
 
+/* Main containers  */
 .container1 {
-  background: linear-gradient(var(--royalblue), var(--slateblue));
+  background: linear-gradient(var(--slateblue), var(--slateblue));
   width: 100%;
-  height: 35vh;
   display: flex;
   border-bottom-left-radius: 10%;
   border-bottom-right-radius: 10%;
@@ -31,16 +31,11 @@ body {
 .container2 {
   display: flex;
   width: 100%;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+/* Results containers */
 
 .results100 {
   background: linear-gradient(var(--violetblue), var(--persianblue));
@@ -56,34 +51,100 @@ body {
 
 .score-container {
   display: flex;
-
   justify-content: space-between;
   align-items: center;
-  background-color: green;
   width: 80%;
-  border-radius: 5px;
-  margin: 5px;
-  height: 5vh;
+  border-radius: 10px;
+  margin: 10px;
+  height: 60px;
 }
 
 .score-container p {
-  margin: 10px;
+  color: hsl(224, 30%, 27%, 1);
+  display: flex;
+  gap: 10px;
 }
 
+.score-span {
+  display: flex;
+  gap: 10px;
+  margin-right: 10px;
+}
+
+.bold-score {
+  font-weight: 900;
+}
+
+/* Summary text */
 .summary {
-  width: 100%;
+  width: 80%;
 }
 
 .summary p {
   margin: 10px;
 }
 
+/* Continue button */
+
 .continue-button {
-  margin-top: 10px;
   background: hsl(224, 30%, 27%);
-  color: white;
-  font-size: 20px;
-  border-radius: 20px;
+  color: hsl(0, 0%, 100%, 0.9);
+  font-size: 16px;
+  border-radius: 7em;
+  font-weight: 600;
   width: 80%;
   height: 50px;
+  border: none;
+}
+
+.continue-button:hover {
+  background: linear-gradient(hsl(241, 81%, 54%));
+}
+
+@media only screen and (min-width: 1080px) {
+  .container1 {
+    width: 25em;
+    height: 35em;
+    border-radius: 20px;
+    justify-content: center;
+  }
+
+  section {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+  }
+
+  .container2 {
+    flex-direction: column;
+    width: 25em;
+    height: 35em;
+    position: relative;
+    border-radius: 20px;
+    justify-content: center;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 1px 3px 25px 1px hsl(241, 100%, 89%);
+  }
+
+  .results100 {
+    height: 12em;
+    width: 12em;
+    margin: 0;
+  }
+
+  .summary {
+    font-weight: 800;
+    font-size: 30px;
+  }
+
+  .results100 h2 {
+    font-size: 5em !important;
+  }
+
+  .your-result {
+    font-size: 30px;
+  }
 }
